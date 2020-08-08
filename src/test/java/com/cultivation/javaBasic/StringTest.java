@@ -82,7 +82,7 @@ class StringTest {
 
         // TODO: Take part of the original string according to expectation.
         // <--start
-        final String partOfString = originalString.substring(5,7);
+        final String partOfString = originalString.substring(5, 7);
         // --end-->
 
         final String expectedString = "is";
@@ -108,7 +108,7 @@ class StringTest {
         String[] words = sentence.split(" ");
         // --End-->
 
-        assertArrayEquals(new String[] {"This", "is", "Mike"}, words);
+        assertArrayEquals(new String[]{"This", "is", "Mike"}, words);
     }
 
     @SuppressWarnings({"unused", "ConstantConditions"})
@@ -121,7 +121,7 @@ class StringTest {
         String[] words = sentence.split("/");
         // --End-->
 
-        assertArrayEquals(new String[] {"This", "is", "Mike"}, words);
+        assertArrayEquals(new String[]{"This", "is", "Mike"}, words);
     }
 
     @SuppressWarnings({"unused", "StringBufferReplaceableByString", "MismatchedQueryAndUpdateOfStringBuilder"})
@@ -137,9 +137,9 @@ class StringTest {
         // --End-->
 
         final String expected =
-            "|---|\n" +
-            "|   |\n" +
-            "|---|\n";
+                "|---|\n" +
+                        "|   |\n" +
+                        "|---|\n";
 
         assertEquals(expected, builder.toString());
     }
@@ -152,6 +152,10 @@ class StringTest {
         int sum = 0;
         // TODO: Write some code to calculate the checksum of the string. The checksum is the sum of each string char.
         // <--Start
+        char[] chars =text.toCharArray();
+        for (char ch : chars) {
+            sum += Character.hashCode(ch);
+        }
         // --End-->
 
         assertEquals(3655, sum);
