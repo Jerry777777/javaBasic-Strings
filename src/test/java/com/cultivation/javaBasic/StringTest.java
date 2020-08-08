@@ -18,7 +18,7 @@ class StringTest {
         //
         // It is really easy to pass the test. But you have to tell why.
         // <--start
-        final Optional<Boolean> areSame = Optional.of(false);
+        final Optional<Boolean> areSame = Optional.of(false);//reason:变量不可变，在replace后生成了另一个变量
         // --end-->
 
         assertEquals("The new string", modifiedString);
@@ -35,7 +35,7 @@ class StringTest {
         //
         // It is really easy to pass the test. But you have to tell why.
         // <--start
-        final Optional<Boolean> areSame = Optional.of(false);
+        final Optional<Boolean> areSame = Optional.of(false);//reason:变量不可变，在trim后生成了另一个变量
         // --end-->
 
         assertEquals("The string with tailing space.", modifiedString);
