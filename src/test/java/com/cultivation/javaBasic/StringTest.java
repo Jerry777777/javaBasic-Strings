@@ -53,7 +53,7 @@ class StringTest {
         //
         // It is really easy to pass the test. But you have to tell why.
         // <--start
-        final Optional<Boolean> areSame = Optional.empty();
+        final Optional<Boolean> areSame = Optional.of(false);//在添加"Part two"后生成了另一个变量，在第三步之前两者是相同的，指向同一个对象
         // --end-->
 
         assertEquals("Part one. Part two.", originalString);
@@ -67,7 +67,7 @@ class StringTest {
 
         // TODO: Take part of the original string according to expectation.
         // <--start
-        final String partOfString = null;
+        final String partOfString = originalString.substring(5);
         // --end-->
 
         final String expectedString = "is great";
